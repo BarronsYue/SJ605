@@ -1,5 +1,3 @@
-SJ605 Package Tutorial
-========
 ## Setting up the environment
 ### Environment
 * Ubuntu 16.04 LTS OS
