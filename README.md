@@ -1,13 +1,13 @@
 SJ605 Package Tutorial
 ========
-## ==Setting up the environment==
-### ==Environment==
+## Setting up the environment
+### Environment
 * Ubuntu 16.04 LTS OS
 * ROS Kinetic 1.12.14
 * Gazebo 7.16.0 (least 7.7.0)
 * RVIZ version 1.12.17 (Qt version 5.5.1 & OGRE version 1.9.0)
 
-### ==Check environment installation==
+### Check environment installation
 1. Check the version of gazebo
 ```
 $ gazebo --version
@@ -23,8 +23,8 @@ $ sudo apt-get install gazebo7
 ```
 $ gazebo --version
 ``` 
-## ==Package installation==
-### ==Installation steps==
+## Package installation
+### Installation steps
 1. Create ROS workspace
 ```
 $ mkdir -p ~/catkin_ws/src
@@ -45,7 +45,7 @@ $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 $ cd ~/catkin_ws
 $ catkin_make
 ```
-### ==simulation==
+### simulation
 
 * To run simulator by using Rviz
 ```
@@ -108,8 +108,8 @@ Inverse kinematics:
 If your output message of inverse kinematics contain 'nan' or 'Exceed joint limit', that means your input position and orientation is not in the reachable region of the robot,  you should just try to type another valid input.
 
 
-## ==Robot information==
-### ==DH table of sj605==
+## Robot information
+### DH table of SJ605
 
 | Links | i   | alpha(i-1) | a(i-1) | d(i)   | theta(i) |
 | ----- | --- |:----------:|:------:|:------:|:--------:|
@@ -121,11 +121,3 @@ If your output message of inverse kinematics contain 'nan' or 'Exceed joint limi
 | 5->6  | 6   |     90     |   0    | 0.131  |    q6    |
 | 6->7  | 7   |     0      |   0    | 0      |    0     |
 
-### ==Joint limit==
-theta 1 : -180~180
-theta 2 : -45~90
-theta 3 : -180~90
-theta 4 : -180~180
-theta 5 : -100~100
-theta 6 : -100~100
-(degree)
